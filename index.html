@@ -191,8 +191,8 @@ body {
       const problemText = `
         Một công ty bán sản phẩm với:<br>
         - Giá gốc \\(a = ${a}\\) nghìn đồng/sp, sản lượng ban đầu \\(q = ${q}\\) sản phẩm;<br>
-        - Nếu mỗi lần giảm giá \\(K = ${K}\\) nghìn đồng thì lượng hàng bán tăng thêm \\(r = ${r}\\) sản phẩm;<br>
-        - Chi phí sản xuất mỗi sản phẩm \\(c = ${c}\\) nghìn đồng.<br><br>
+        - Qua khảo sát thị trường cho thấy, nếu mỗi lần giảm giá \\(K = ${K}\\) nghìn đồng thì lượng hàng bán tăng thêm \\(r = ${r}\\) sản phẩm;<br>
+        - Biết rằng chi phí sản xuất mỗi sản phẩm \\(c = ${c}\\) nghìn đồng.<br><br>
         Hỏi: Công ty nên giảm giá bao nhiêu lần để lợi nhuận thu được lớn nhất? 
         Lợi nhuận tối đa là bao nhiêu?
       `;
@@ -230,6 +230,7 @@ body {
         - Sản lượng: \\(q(x) = q + rx = ${q} + ${r}x\\).<br>
         - Lợi nhuận: \\(L(x) = (p(x) - c)q(x) = (${a} - ${K}x - ${c})(${q} + ${r}x)\\).<br><br>
         Rút gọn: \\(L(x) = ${A}x^2 + ${B}x + ${C}\\).<br><br>
+        Ta thấy  L(x) là hàm số bậc hai với hệ số \\(A = ${A} < 0\\), nên L(x) có giá trị lớn nhất đạt tại hoành độ đỉnh của parabol.<br>
         Hoành độ đỉnh: \\(x^* = -\\tfrac{B}{2A} = ${xVertex.toFixed(2)}\\).<br><br>
         Vậy số lần giảm giá tối ưu: \\(x \\approx ${xOpt}\\).<br>
         - Giá bán: ${priceOpt} nghìn đồng/sp.<br>
@@ -273,3 +274,4 @@ body {
 </script>
 
 </html>
+
